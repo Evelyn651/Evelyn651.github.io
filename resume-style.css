@@ -1,0 +1,27 @@
+*{
+    font-family: 'Slabo 27px', serif;
+
+}
+
+body{
+    margin: 0;
+}
+h1{
+    align-content: center;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+.resume-tab{
+    color: black;
+}
+
+.tab-link{
+    text-decoration: none;
+
+}
+
+.container{
+}
