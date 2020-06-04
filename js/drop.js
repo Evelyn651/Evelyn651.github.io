@@ -1,4 +1,4 @@
-class drop{
+class Drop {
     constructor(xPosition, yPosition, dropSpeed, dropWidth, dropHeight) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
@@ -8,7 +8,7 @@ class drop{
         this.element;
     }
 
-    show(){
+    show() {
         this.element = document.createElement("div");
         this.element.className += "rainDrop";
         this.element.style.top = this.yPosition + "px";
@@ -20,18 +20,20 @@ class drop{
         el.appendChild(this.element);
     }
 
-    fall(){
-       const makeItRain = () => {
-           this.yPosition = this.yPosition + this.dropSpeed;
-           this.element.style.top = this.yPosition + "px";
+    fall() {
+        const makeItRain = () => {
+            this.yPosition = this.yPosition + this.dropSpeed;
+            this.element.style.top = this.yPosition +"px";
 
-           if(this.yPosition < window.innerHeight){
-               requestAnimationFrame(makeItRain);
-           }else{
-               this.yPosition = -10;
-               requestAnimationFrame(makeItRain);
-           }
-       }
-       requestAnimationFrame(makeItRain);
+            if(this.yPosition < window.innerHeight) {
+                requestAnimationFrame(makeItRain);
+            } else {
+                this.yPosition = -10;
+                requestAnimationFrame(makeItRain);
+            }
+
+        }
+
+        requestAnimationFrame(makeItRain);
     }
 }
